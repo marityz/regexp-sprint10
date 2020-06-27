@@ -20,7 +20,10 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="" placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name" minlength="2" maxlength="20"
+                               pattern="^[А-Я,Ё][а-я,ё]+(-[А-Я,Ё][а-я,ё]+)?$"
+                               placeholder="Имя" required/>
+                        <span class="form__error">Введите имя на русском языке, например, "Мария-Анна"</span>
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="text" name="email" pattern="" placeholder="E-Mail" required />
